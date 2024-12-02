@@ -1,11 +1,14 @@
-/* Rellenar: Nombres de los integrantes del equipo:
-1)
-2)
-3)
-4)
-5)
-6)
-*/
+ /** Generar algoritmos DFS y BFS
+ * 
+ * Rellenar: Nombres de los integrantes del equipo:
+ *   1)
+ *   2)
+ *   3)
+ *   4)
+ *   5)
+ *   6)
+ * 
+ **/
 public class UV_E3_Apellidos_Nombre {
     public static void main (String[] args){
         // Primero llenamos el árbol  
@@ -17,10 +20,19 @@ public class UV_E3_Apellidos_Nombre {
 
     }        
 
-    //Para este método usa una Stack personalizada
-    public boolean searchDFSIterative(int data) {
-        //TODO
-        throw new UnsupportedOperationException("Aun no se implemnta este método, borra est throw cuando lo completes");
+    //Para este método usa una Stack personalizada  (Ejemplo)
+    public boolean searchDFSIterative(BinaryTree.Node node,
+                                         int data) {
+        if (node == null) { return false; }
+        Stack<BinaryTree.Node> stack = new Stack<>();
+        stack.push(node);
+        while (!stack.isEmpty()) {
+            BinaryTree.Node actual = stack.pop();
+            if (actual.data == data) { return true; }
+            if (actual.right != null) { stack.push(actual.right); }
+            if (actual.left != null) { stack.push(actual.left); }
+        }
+        return false;           
     }
 
     //Para este método usa una Queue personalizada

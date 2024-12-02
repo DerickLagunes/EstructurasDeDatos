@@ -31,7 +31,8 @@ public class UV_E2_Apellidos_Nombre {
         
         
     // Recorrido in-order (izquierda, raíz, derecha)
-    public static boolean isBST(BinaryTree.Node root, int min, int max) {
+    public static boolean isBST(BinaryTree.Node root, 
+                                int min, int max) {
         return isBSTRecursive(root, min, max);
     }
 

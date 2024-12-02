@@ -1,4 +1,4 @@
-public class UV_E1_LagunesRamirez_DerickAxel {
+public class UV_E1_Apellidos_Nombres {
 
     public static void main(String[] args) {
         //Arbol
